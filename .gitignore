@@ -1,0 +1,14 @@
+#python files
+.venv/
+.pylintrc
+__pycache__/
+poetry.lock
+
+
+#ide
+.vscode
+.idea
+
+#django
+db.sqlite3
+media/
