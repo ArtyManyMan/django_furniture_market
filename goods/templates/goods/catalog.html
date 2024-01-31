@@ -1,6 +1,10 @@
-{% extends "main/base.html" %}
+{% extends "base.html" %}
 {% load static %}
 {% load goods_tags %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static "deps/css/my_footer_css.css" %}">
+{% endblock style %}
 
 {% block content %}
 <div class="row">
