@@ -105,7 +105,7 @@
                     </ul>
                 </div>
                 <!-- Значек корзины, вызывает модальное окно -->
-                {% block modal_cart %}{% endblock modal_cart %}
+                {% block modal_cart %}{% endblock %}
                 <!-- Закончилась разметка модального окна -->
             </div>
         </div>
@@ -132,7 +132,7 @@
     {% endblock footer %}
 
     <script src="{% static "deps/js/jquery/jquery-3.7.0.min.js" %}"></script>
-    <script src="{% static "deps/js/jquery-events.js" %}"></script>
+    {% comment %} <script src="{% static "deps/js/jquery-events.js" %}"></script> {% endcomment %}
     <script src="{% static "deps/js/jquery-ajax.js" %}"></script>
     <script src="{% static "deps/js/bootstrap/bootstrap.bundle.min.js" %}"></script>
 </body>
