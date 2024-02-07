@@ -3,6 +3,7 @@ from enum import unique
 from re import T
 from unicodedata import category
 from django.db import models
+from django.urls import reverse
 
 
 # Create your models here.
@@ -53,6 +54,10 @@ class Products(models.Model):
 
     def __str__(self):
         return f'{self.name} Количесвто - {self.quantity}'
+    
+    def get_absolute_url(self):
+        return reverse("catalog:product", kwargs={"product_slug": self.slug})
+    
     
     def display_id(self):
         formatted_id = f'{self.id:05d}'
