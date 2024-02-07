@@ -46,7 +46,7 @@
                                 value="{% if form.phone_number.value %}{{ form.phone_number.value }}{% endif %}"
                                 placeholder="В формате: XXX-XXX-XX-XX"
                                 required>
-                            {% if form.phone_numbererrors %}
+                            {% if form.phone_number.errors %}
                                 <div class="alert alert-danger alert-dismissible fade show">{{ form.phone_number.errors }}</div>
                             {% endif %}
                         </div>
@@ -87,6 +87,9 @@
                                     id="id_payment_on_get" value="1">
                                 <label class="form-check-label" for="id_payment_on_get">Наличными/картой
                                     при плучении</label>
+                                {% if form.payment_on_get.errors %}
+                                    <div class="alert alert-danger alert-dismissible fade show">{{ form.payment_on_get.errors }}</div>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
